@@ -165,6 +165,11 @@ export class GoogleLogin extends Common {
             let gso = new com.google.android.gms.auth.api.signin.GoogleSignInOptions.Builder(com.google.android.gms.auth.api.signin.GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail();
 
+            if (GoogleLogin.Config.google.scopes) {
+                let scope0 = new com.google.android.gms.common.api.Scope(GoogleLogin.Config.google.scopes[0]);
+                let scopes = GoogleLogin.Config.google.scopes.slice(1).map(s => new com.google.android.gms.common.api.Scope(s));
+                gso = gso.requestScopes(scope0, scopes);
+            }
 
             if (!isNullOrUndefined(GoogleLogin.Config.google.serverClientId)) {
                 if (!GoogleLogin.Config.google.isRequestAuthCode) {
