@@ -8,7 +8,7 @@ import {
     IInitializationResult,
     merge,
     ILoginConfiguration
-} from "./nativescript-google-login.common";
+} from "./nativescript-google-login";
 
 const LOGTAG_ON_GOOGLE_RESULT = "Google successCallback";
 

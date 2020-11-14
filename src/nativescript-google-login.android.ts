@@ -1,6 +1,6 @@
 import { AndroidActivityResultEventData, AndroidApplication, Application } from "@nativescript/core";
 import { isNullOrUndefined } from "@nativescript/core/utils/types";
-import { Common, IInitializationResult, ILoginResult, LoginResultType, merge, ILoginConfiguration, LOGTAG_LOGOUT } from "./nativescript-google-login.common";
+import { Common, IInitializationResult, ILoginResult, LoginResultType, merge, ILoginConfiguration, LOGTAG_LOGOUT } from "./nativescript-google-login";
 
 const LOGTAG_ON_ACTIVITY_RESULT = "onActivityResult()";
 
